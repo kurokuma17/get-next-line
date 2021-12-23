@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:38:51 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/22 12:57:42 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/22 11:48:10 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/22 12:25:48 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H_
-# define GET_NEXT_LINE_H_
-# include "libft/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-//# define BUFF_SIZE 32
-int get_next_line(const int fd, char **line);
-#endif
+#include "libft.h"
+
+size_t	ft_strclen(const char *str, char c)
+{
+	size_t	len;
+
+	len = 0;
+	if (str)
+	{
+		while (str[len] && str[len] != c)
+			len++;
+	}
+	return (len);
+}
