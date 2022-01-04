@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:18:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/12 21:31:19 by trnguyen         ###   ########.fr       */
+/*   Updated: 2022/01/04 20:28:14 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
+	size_t	len;
 
+	len = ft_strlen(src);
 	i = 0;
-	while (i < ft_strlen(src))
+	while (i < len)
 	{
 		dst[i] = src[i];
 		i++;
