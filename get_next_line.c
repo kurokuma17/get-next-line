@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:38:12 by trnguyen          #+#    #+#             */
-/*   Updated: 2022/01/04 17:13:33 by trnguyen         ###   ########.fr       */
+/*   Updated: 2022/01/04 20:52:06 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@
 // 	return (1);
 // }
 
-int	get_line(const int fd, char **line, char *remain[fd])
+int	get_line(const int fd, char **line, char **remain)
 {
 	char	*temp;
 	size_t	len;
@@ -96,10 +96,9 @@ int	get_next_line(const int fd, char **line)
 
 	if (fd < 0 || !line || fd >= MAX_FD || BUFF_SIZE <= 0)
 		return (-1);
-	bytes = 1;
+	bytes = read(fd, buff, BUFF_SIZE);
 	while (bytes > 0)
 	{
-		bytes = read(fd, buff, BUFF_SIZE);
 		buff[bytes] = '\0';
 		if (remain[fd] == NULL)
 			remain[fd] = ft_strnew(1);
@@ -108,6 +107,7 @@ int	get_next_line(const int fd, char **line)
 		remain[fd] = temp;
 		if (ft_strchr(buff, '\n'))
 			break ;
+		bytes = read(fd, buff, BUFF_SIZE);
 	}
 	if (bytes < 0)
 		return (-1);
