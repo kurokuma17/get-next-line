@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:38:51 by trnguyen          #+#    #+#             */
-/*   Updated: 2022/01/13 13:54:48 by trnguyen         ###   ########.fr       */
+/*   Updated: 2022/01/15 19:06:31 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 # include "libft.h"
 # include <unistd.h>
 # include <stdlib.h>
-//# define BUFF_SIZE 8
+# define BUFF_SIZE 32
 # define MAX_FD 8192
-# define RET_VALUE(ret)	ret > 0 ? 1 : ret
 
 int	get_next_line(const int fd, char **line);
 
