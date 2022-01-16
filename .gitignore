@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#gnl specific tests and executable
+*.test
+test_gnl*

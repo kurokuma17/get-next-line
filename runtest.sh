@@ -48,6 +48,6 @@ echo -e "\033[1;36mMultiple fds tests:\033[0m"
 echo ""
 clang -Wall -Wextra -Werror -I libft/includes -o main-multi-fds.o -c main-multi-fds.c
 clang -o test_gnl_multi main-multi-fds.o get_next_line.o -I libft/includes -L libft/ -lft
-tail -n +1 test_files/5-swcraw-iv.txt test_files/5-swcrawl-v.txt test_files/5-swcrawl-vi.txt
+head -n 5 test_files/5-swcraw-iv.txt test_files/5-swcrawl-v.txt test_files/5-swcrawl-vi.txt
 ./test_gnl_multi test_files/5-swcraw-iv.txt test_files/5-swcrawl-v.txt test_files/5-swcrawl-vi.txt
 echo -e "\033[0;35mMulti fds test done\033[0m"
