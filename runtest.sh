@@ -1,9 +1,9 @@
 #!/bin/bash
-# chown <username> 4-3-forbidden.txt
+#sudo chown SlushGuest test_files/4-3-forbidden.txt
 make -C libft/ fclean && make -C libft/
-clang -Wall -Wextra -Werror -I libft/includes -o get_next_line.o -c get_next_line.c
+clang -Wall -Wextra -Werror -I libft/includes -o get_next_line.o -c get_next_line.c -D BUFF_SIZE=1 #[modify buffsize if needed here]
 clang -Wall -Wextra -Werror -I libft/includes -o main.o -c main.c
-clang -o test_gnl main.o get_next_line.o -I libft/includes -L libft/ -lft #-D BUFF_SIZE=8 #[modify buffsize if needed here]
+clang -o test_gnl main.o get_next_line.o -I libft/includes -L libft/ -lft 
 
 echo ""
 echo -e "\033[1;36mauthor file:\033[0m"
@@ -40,7 +40,7 @@ done
 
 echo ""
 echo -e "\033[0;35mBasic tests done\033[0m"
-rm test_files/*.test
+#rm test_files/*.test
 
 
 echo ""
