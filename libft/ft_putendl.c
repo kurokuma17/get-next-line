@@ -6,12 +6,12 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 12:26:12 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 15:08:22 by trnguyen         ###   ########.fr       */
+/*   Updated: 2022/01/16 01:41:22 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+ 
 void	ft_putendl(char const *s)
 {
 	if (s)
