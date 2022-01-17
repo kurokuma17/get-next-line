@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:38:12 by trnguyen          #+#    #+#             */
-/*   Updated: 2022/01/15 19:07:09 by trnguyen         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:29:20 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	get_next_line(const int fd, char **line)
 		temp = ft_strjoin(remain[fd], buff);
 		free(remain[fd]);
 		remain[fd] = temp;
-		if (ft_strchr(buff, '\n'))
+		if (ft_strchr(remain[fd], '\n'))
 			break ;
 		bytes = read(fd, buff, BUFF_SIZE);
 	}
