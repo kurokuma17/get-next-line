@@ -47,5 +47,7 @@ int main (int argc, char **argv)
 			printf("-----------\nEnd of: %s\n", argv[1]);
 		close(fd);
 		close(temp);
+		printf("\n");
+		system("leaks test_gnl");
 	}
 }

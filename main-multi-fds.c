@@ -33,10 +33,12 @@ int main (int argc, char **argv)
 		
 		ret = get_next_line(fd3, &buff);
 		printf("[Return: %d] Line #%d from fd #%d: %s\n", ret, line3++, fd3, buff);
-		free(buff);	
+		free(buff);
 
 		close(fd1);
 		close(fd2);
 		close(fd3);
+		printf("\n");
+		system("leaks test_gnl_multi | grep 'leaked'");
 	}
 }
